@@ -1,9 +1,9 @@
 Setup
 -----
 
-The following instructions will help you run the demo in a [Docker Machine](https://github.com/osipov/district-insurance-sample/blob/master/README.md#option-1-local-docker-machine). You can also use IBM DevOps or an interactive deploy from your command line. 
-
 Make sure you have an IBM Bluemix account. You can get one here: https://apps.admin.ibmcloud.com/manage/trial/bluemix.html
+
+The following instructions will help you run the demo in a [Docker Machine](https://github.com/osipov/district-insurance-sample/blob/master/README.md#option-1-local-docker-machine). You can also use IBM DevOps or an interactive deploy from your command line. 
 
 Option 1. Local Docker Machine
 --------------------
@@ -35,7 +35,7 @@ Run the build and deploy process
 
 	make build-release-local
 
-When prompted for the image name (defaults to district-insurance-sample), you can hit enter to accept the default or type in your own.
+When prompted for the image name (defaults to district-insurance-sample), you can hit enter to accept the default or type in your own. You will also be prompted to use your Bluemix credentials to login and to note credentials for Tradeoff Analytics shown as a JSON string. You will have to enter these credentials as part of the deploy process.
 
 The default run scenario maps the container port 80 to host port 8080, so depending on the port forwarding configuration of your Docker Machine environment, the application should be accessible from 
 
