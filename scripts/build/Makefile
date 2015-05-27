@@ -8,7 +8,7 @@ build:
 build-local:
 	cp scripts/build/Dockerfile .
 	cp scripts/build/.dockerignore . 
-	ice build -t $(IMAGE) .
+	ice build --local -t $(IMAGE) .
 
 rerun:
 	@make -j 1 -f scripts/build/bluemix.mk push rerun

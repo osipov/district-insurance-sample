@@ -22,6 +22,9 @@ endif
 	@read -p "Press any key to continue."  blah
 
 .interactive-deploy-cf: .login-cf .interactive-deploy-warn .deploy-cf
+	@cf env NOOP
+	@echo Note the Tradeoff Analytics password and username above and copy/paste them when prompted
+	@read -p "Press any key to continue."  blah	
 #-------------------------------------------------------------------------------
 # Copyright IBM Corp. 2015
 #
