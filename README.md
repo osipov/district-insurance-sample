@@ -37,13 +37,17 @@ Run the build and deploy process
 
 When prompted for the image name (defaults to district-insurance-sample), you can hit enter to accept the default or type in your own. You will also be prompted to use your Bluemix credentials to login and to note credentials for Tradeoff Analytics shown as a JSON string. You will have to enter these credentials as part of the deploy process.
 
-The default run scenario maps the container port 80 to host port 8080, so depending on the port forwarding configuration of your Docker Machine environment, the application should be accessible from 
+The default deployment maps the container port 80 to host port 8080, so depending on the port forwarding configuration of your environment, the application should be accessible from your Docker Machine IP address which you can check using
 
-	http://localhost:8080/
+	docker-machine ip
+	
+so the demo application should be accessible from
 
-Login using bob / secret
+	http://<ip>:8080/
 
-The scenario is described in more detail in the Demo section.
+where you can login using bob / secret
+
+The scenario is described in more detail in the [Demo](https://github.com/osipov/district-insurance-sample/blob/master/README.md#demo) section.
 
 Option 2. Deploy to the Bluemix Container Service
 
