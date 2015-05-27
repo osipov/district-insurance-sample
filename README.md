@@ -3,7 +3,7 @@ Setup
 
 Make sure you have an IBM Bluemix account. You can get one here: https://apps.admin.ibmcloud.com/manage/trial/bluemix.html
 
-The following instructions will help you run the demo in a [Docker Machine](https://github.com/osipov/district-insurance-sample/blob/master/README.md#option-1-local-docker-machine). You can also use IBM DevOps or an interactive deploy from your command line. 
+The following instructions will help you run the demo in a [Docker Machine](https://github.com/osipov/district-insurance-sample/blob/master/README.md#option-1-local-docker-machine). You can also use IBM DevOps or an interactive deployment to IBM Container Service from your command line. 
 
 Option 1. Local Docker Machine
 --------------------
