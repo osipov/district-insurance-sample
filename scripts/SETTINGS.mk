@@ -1,5 +1,5 @@
 # Licensed under the Apache License. See footer for details.
-IMAGE_DEFAULT := ice-pipeline-demo
+IMAGE_DEFAULT := district-insurance-sample
 
 #uncomment and specify Container Service defaults below
 #REGISTRY_DEFAULT := 
