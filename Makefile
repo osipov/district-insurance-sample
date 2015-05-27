@@ -1,5 +1,5 @@
 # Licensed under the Apache License. See footer for details.
-NAME := ice-pipeline-demo
+NAME := district-insurance-sample
 #for now, mock unique build identifiers with a random number
 UUID := $(shell echo $$RANDOM)
 TEST_IMAGE ?= $(NAME)-$(UUID)-test-build
@@ -15,7 +15,7 @@ build-release-local: .interactive-local-deploy-cf
 	@make IMAGE=$(NAME) -j 1 -f scripts/build/Makefile build-local rerun-local
 
 build-release-bluemix: .interactive-deploy-cf .setup-ics .login-ics
-	@make IMAGE=$(NAME) -j 1 -f scripts/build/Makefile build-local rerun
+	@make IMAGE=$(NAME) -j 1 -f scripts/build/Makefile build rerun
 
 build-release-bluemix-devops: .deploy-cf
 	@make IMAGE=$(NAME) -j 1 -f scripts/build/Makefile build rerun
