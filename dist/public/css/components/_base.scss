@@ -1,0 +1,26 @@
+@import "../mixin/flex";
+@import "../config/defaults";
+@import "../generated/_icons.svg";
+@import "header";
+@import "navigation";
+
+.tricolumn {
+	@include flexbox;
+	@include align-items(flex-start);
+	@include justify-content(flex-start);
+}
+
+.tricolumn .content {
+	@include flex-grow(1);
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+	.tricolumn {
+		@include flex-flow(column nowrap);
+	}
+}
+
+.content {
+	margin: 20px 20px 50px 0;
+}

@@ -1,0 +1,94 @@
+{>"layouts/navigation" /}
+
+{<css}
+	<link rel="stylesheet" href="/css/pages/calculator.css" />
+{/css}
+{<body}
+	<section class="calculator">
+		<div class="calculator-content">
+			<form class="calculator-form">
+				<h1>Investment Calculator</h1>
+				<label>Calculate:</label>
+				<select name="calctype">
+					<option value="endingBalance">Ending Balance</option>
+				</select>
+				<hr>
+				<h3>Savings Information</h3>
+				<label>Beginning Balance:</label>
+				<input type="text" name="balance" value="$2500.00">
+				<label>Rate of Return (%):</label>
+				<input type="text" name="return" value="4.500%">
+				<label>Duration:</label>
+				<div class="calculator-inline-flex">
+					<input type="number" name="duration" value="52">
+					<select name="duration_type">
+						<option value="months">Months</option>
+						<option value="years">Years</option>
+					</select>
+				</div>
+				<label>Contributions:</label>
+				<div class="calculator-inline-flex">
+					<input type="text" name="contributions" value="$7748.00">
+					per
+					<select name="contrib_type">
+						<option value="month">Month</option>
+						<option value="year">Year</option>
+					</select>
+				</div>
+				<label>Inflation Rate (%):</label>
+				<input type="text" name="inflation" value="3.00">
+				<input type="submit" name="submit" value="Calculate">
+			</form>
+
+			<div class="calculator-results">
+				<div class="toplinks">
+					<span>
+						<img src="/images/blank.gif" class="icon-addIcon">
+						<a href="#">Create new calculation</a>
+					</span>
+					<span>
+						<img src="/images/blank.gif" class="icon-saveIcon">
+						<a href="#">Save</a>
+					</span>
+					<span>
+						<img src="/images/blank.gif" class="icon-deleteIcon">
+						<a href="#">Delete</a>
+					</span>
+				</div>
+				<div class="calc-results-breakdown">
+					<span class="calc-breakdown-graph">
+						{! <img src="/images/donut-graph.png" title="pie graph of total balance" /> !}
+						<div class="centered">
+							<h4>Total Balance</h4>
+							<div>$14,566</div>
+						</div>
+					</span>
+					<span class="calc-breakdown-info">
+						<ul>
+							<li><div>$5,387</div><div>46% Interest</div></li>
+							<li><div>$1,803</div><div>8% Interest</div></li>
+							<li><div>$7,376</div><div>8% Interest</div></li>
+						</ul>
+					</span>
+				</div>
+				<hr>
+				<div class="calc-results-summary">
+					<h3>Summary</h3>
+					<div>
+						<span>
+							<strong>4% return</strong> on all investments over a rate of <strong>4.5 inflation</strong> over a period of <strong>52 months</strong>.
+						</span>
+						<span>
+							That's a total growth of over <strong>239%</strong>.
+						</span>
+						<img src="/images/summary-graph.png" title="graph rate of return" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{/body}
+
+{<javascript}
+	<script src="/js/utils.js"></script>
+{/javascript}

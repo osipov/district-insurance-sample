@@ -1,0 +1,9 @@
+{>"layouts/navigation" /}
+
+{<css}
+    <link rel="stylesheet" href="/css/pages/home.css" />
+{/css}
+
+{<body}
+    <h1>{@pre type="content" key="greeting"/}</h1>
+{/body}

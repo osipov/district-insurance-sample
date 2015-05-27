@@ -1,0 +1,9 @@
+{>"layouts/master" /}
+
+{<css}
+    <link rel="stylesheet" href="/css/pages/login.css" />
+{/css}
+
+{<content}
+    <h1>{@pre type="content" key="greeting"/}</h1>
+{/content}

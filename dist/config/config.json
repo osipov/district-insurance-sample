@@ -1,0 +1,151 @@
+{
+    "demo": {
+        "users": [{
+            "id" : 1,
+            "username" : "bob",
+            "password" : "secret",
+            "email" : "bob@example.com",
+            "firstName" : "Robert",
+            "lastName" : "Smith",
+            "picURL" : "/images/agentPhoto.png"
+        }, {
+            "id" : 2,
+            "username" : "joe",
+            "password" : "birthday",
+            "email" : "joe@example.com",
+            "firstName" : "Joseph",
+            "lastName" : "Saccone",
+            "picURL" : "/images/agentPhoto.png"
+        } ]
+    },
+
+    "express": {
+        "view cache": false,
+        "view engine": "js",
+        "views": "path:./.build/templates"
+    },
+
+    "view engines": {
+        "js": {
+            "module": "engine-munger",
+            "renderer": {
+                "method": "js",
+                "arguments": [
+                    { "cache": true },
+                    {
+                        "views": "config:express.views",
+                        "view engine": "config:express.view engine",
+                        "specialization": "config:specialization",
+                        "i18n": "config:i18n"
+                    }
+                ]
+            }
+        }
+    },
+
+    "i18n": {
+        "contentPath": "path:./locales",
+        "fallback": "en-US"
+    },
+
+    "middleware": {
+
+        "static": {
+            "module": {
+                "arguments": [ "path:./.build" ]
+            }
+        },
+
+        "router": {
+            "module": {
+                "arguments": [{ "directory": "path:./controllers" }]
+            }
+        },
+
+        "expressView": {
+            "priority": 100,
+            "enabled": true,
+            "module": {
+                "name": "engine-munger/lib/expressView"
+            }
+        },
+
+        "appsec": {
+            "module": {
+                "arguments": [{"csrf": false}]
+            }
+        },
+
+        "fileNotFound": {
+            "enabled": true,
+            "priority": 130,
+            "module": {
+                "name": "kraken-js/middleware/404",
+                "arguments": [ "errors/404" ]
+            }
+        },
+
+        "serverError": {
+            "enabled": true,
+            "priority": 140,
+            "module": {
+                "name": "kraken-js/middleware/500",
+                "arguments": [ "errors/500" ]
+            }
+        },
+
+        "flash": {
+            "priority": 91,
+            "enabled": true,
+            "module": {
+                "name":"connect-flash",
+                "method": "flash"
+            }
+        },
+
+        "isAuthenticated": {
+            "enabled": true,
+            "priority": 111,
+            "module": {
+                "name":"path:./lib/auth",
+                "method": "isAuthenticated"
+
+            }
+        },
+
+        "injectUser": {
+            "enabled": true,
+            "priority": 112,
+            "module": {
+                "name":"path:./lib/auth",
+                "method": "injectUser"
+            }
+        },
+
+        "compress": {
+            "enabled": true,
+            "module": {
+                "name": "compression",
+                "arguments": [
+                    {
+                        // 512 byte minimum before compressing output
+                        "threshold": 512
+                    }
+                ]
+            }
+        },
+        "session": {
+            "enabled": true,
+            "priority": 100,
+            "module": {
+                "name": "express-session",
+                "arguments": [
+                    {
+                        "key": "JSESSIONID",
+                        "secret": "keyboard cat"
+                    }
+                ]
+            }
+        }
+    }
+}

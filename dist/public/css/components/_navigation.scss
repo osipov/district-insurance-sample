@@ -1,0 +1,49 @@
+@import "../config/_defaults";
+
+nav {
+	@include flex(0, 0, auto);
+	margin-right: 18px;
+	margin-top: 1px;
+}
+
+nav > a {
+	width: 3em;
+	height: 3em;
+	background-color: $secondary-color;
+	border: 0;
+	border-top: 2px solid $separator-color;
+	@include flexbox;
+	@include align-items(center);
+	@include justify-content(center);
+}
+
+nav > a:first-child {
+	border: 0;
+}
+
+nav > a:hover, nav > a.active {
+	background-color: $primary-color;
+}
+
+nav > a > img {
+	width: 34px;
+	height: 34px;
+	outline: none;
+	border: 0;
+}
+
+@media (max-width: 768px) {
+	nav {
+		@include flexbox;
+		@include flex(1, 1, auto);
+		@include flex-flow(row nowrap);
+		width: 100%;
+		@include justify-content(center);
+		margin: 0;
+	}
+	nav > a {
+		@include flex(1, 1, 0);
+		border: 0;
+		border-left: 1px solid $separator-color;
+	}
+}

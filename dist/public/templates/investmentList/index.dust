@@ -1,0 +1,15 @@
+<div class="well">
+    <div id="dataArea">
+        <div id="editArea" class="editArea" style="display: none;">
+            <textarea id="inputText" onchange="onInputJsonChanged()"></textarea>
+        </div>
+        <div id="tableArea">
+            <div class="investmentsHeader">
+                <img class="icon-list-investmentsIcon investmentsIcon" src="/images/blank.gif" />
+                <span class="investmentsTitle">Investments</span>
+                <span class="dataDate">Updated: January 29, 2015</span>
+            </div>
+            <div id="tablePlaceHolder"></div>
+        </div>
+    </div>
+</div>

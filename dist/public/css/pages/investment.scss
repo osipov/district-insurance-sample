@@ -1,0 +1,50 @@
+@import "../components/base";
+@import "../components/table";
+@import "../components/tradeoff";
+
+#tabs {
+	list-style: none;
+	@include flexbox;
+	margin: 0;
+	padding: 0;
+}
+
+#tabs > li{
+	cursor: pointer;
+	padding: 15px 20px 15px 15px;
+	background: $inactive-color;
+	color: $primary-font-color;
+	@include flexbox;
+	@include justify-content(center);
+	@include align-items(center);
+}
+
+#tabs > li:hover{
+	background: $secondary-color;
+	cursor: pointer;
+}
+
+#tabs > li.tabActive {
+	background: $active-color;
+	color: $primary-font-color;
+}
+
+#tabscontent {
+	margin: 0;
+}
+
+.tabTitle {
+	font-size: 1.1em;
+}
+
+.watsonIcon {
+	height: 30px;
+	width: 28px;
+	margin: -4px 10px 0 0;
+}
+
+.listIcon {
+	height: 30px;
+	width: 28px;
+	margin: -4px 10px 0 0;
+}

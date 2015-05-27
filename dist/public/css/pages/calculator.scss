@@ -1,0 +1,232 @@
+@import "../components/base";
+
+$total-balance-color: #0e7770;
+$pie-chart-color1: #0d3f69;
+$pie-chart-color2: #19a7a0;
+$pie-chart-color3: #8cc63f;
+
+.calculator {
+	@include flexbox;
+	@include flex-direction(column);
+
+	color: $primary-font-color;
+	background: white;
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		font-weight: normal;
+	}
+
+	hr {
+		width: 100%;
+		border: 0;
+		border-top: 2px solid $app-bg-color;
+	}
+}
+
+.calculator-content {
+	@include flexbox;
+	@include justify-content(space-around);
+}
+
+.calculator-form {
+	@include flex(1, 1, 30%);
+
+	@include flexbox;
+	@include flex-direction(column);
+
+	border-right: 2px solid $app-bg-color;
+	padding: 1em 4em;
+	max-width: 15em;
+
+	label {
+		font-weight: bold;
+		margin-bottom: 0.3em;
+	}
+
+	select,
+	input {
+		padding: 0.5em;
+		font-size: 1em;
+		color: $primary-font-color;
+		border: 2px solid $app-bg-color;
+	}
+
+	select {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+
+		background: transparent;
+		background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232.25%22%20height%3D%2235.24%22%20viewBox%3D%220%200%2032.25%2035.24%22%3E%3Cpath%20fill%3D%22%2300B39F%22%20d%3D%22M16.13%2022.02l-6.39-6.39%201.6-1.61%204.79%204.79%204.78-4.79%201.61%201.61z%22%2F%3E%3C%2Fsvg%3E');
+		background-repeat: no-repeat;
+		background-position: right center;
+
+		padding-right: 2em;
+	}
+}
+
+.calculator-results {
+	@include flex(1, 1, 70%);
+
+	> :not(.toplinks):not(hr) {
+		padding: 1em 4em;
+	}
+
+	hr {
+		width: 90%;
+		padding: 0;
+	}
+}
+
+.calculator input,
+.calculator select {
+	margin-bottom: 1em;
+}
+
+.calculator input {
+	text-align: right;
+}
+
+.calculator-inline-flex {
+	@include flexbox;
+	@include align-items(baseline);
+
+	> * {
+		@include flex(1);
+		margin: 0 0.5em;
+	}
+
+	> input {
+		min-width: 0; // https://bugzilla.mozilla.org/show_bug.cgi?id=1067136
+	}
+
+	:first-child {
+		margin-left: 0;
+	}
+
+	:last-child {
+		margin-right: 0;
+	}
+}
+
+.calculator input[type="submit"] {
+	margin-top: 1em;
+	background-color: $secondary-color;
+	color: #ffffff;
+	text-align: center;
+	text-transform: uppercase;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.calculator-results .toplinks {
+	@include flexbox;
+	@include justify-content(flex-end);
+
+	> * {
+		@include flexbox;
+		@include align-items(center);
+
+		padding: 1em;
+		border: solid $app-bg-color;
+		border-width: 0 0 2px 2px;
+	}
+
+	a {
+		margin: 0 0.3em;
+		text-decoration: none;
+		color: $primary-font-color;
+	}
+
+	img {
+		width: 2em;
+		height: 2em;
+	}
+}
+
+.calc-results-breakdown {
+	@include flexbox;
+	@include justify-content(space-around);
+	@include align-content(center);
+	@include align-items(center);
+}
+
+.calc-breakdown-graph {
+	background-image: url(/images/donut-graph.png);
+	width: 350px;
+	height: 350px;
+
+	.centered {
+		position: relative;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+
+		text-align: center;
+
+		h4 {
+			text-transform: uppercase;
+			margin: 0;
+		}
+
+		div {
+			font-size: xx-large;
+			font-weight: bold;
+			color: $total-balance-color;
+		}
+	}
+}
+
+.calc-breakdown-info {
+	ul {
+		list-style-type: none;
+		padding: 0;
+
+		:nth-child(1) :first-child {
+			color: $pie-chart-color1;
+		}
+
+		:nth-child(2) :first-child {
+			color: $pie-chart-color2;
+		}
+
+		:nth-child(3) :first-child {
+			color: $pie-chart-color3;
+		}
+	}
+
+	li {
+		margin-bottom: 0.5em;
+		border-left: 1px solid black;
+		padding-left: 0.3em;
+
+		:first-child {
+			font-size: x-large;
+		}
+
+		:last-child {
+			font-size: smaller;
+		}
+	}
+}
+
+.calc-results-summary div {
+	@include flexbox;
+	@include justify-content(space-around);
+
+	> * {
+		max-width: 30%;
+	}
+}
+
+@media (max-width: 768px) {
+	.calculator-form,
+	.calculator-results > :not(.toplinks):not(hr) {
+		padding: 1em;
+	}
+}

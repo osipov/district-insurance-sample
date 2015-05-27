@@ -1,0 +1,132 @@
+#taWidgetContainer.fullsize {
+	width:100vw;
+	height:100vh;
+}
+
+#taWidgetContainer {
+	width: 100%;
+	height: 90vh;
+	display: block;
+}
+
+#featuresArea {
+	margin-bottom: 30px;
+	display: none;
+}
+
+#themeArea {
+	display: none;
+}
+
+#editArea {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+}
+
+.editArea textArea {
+	height: 100%;
+	width: 100%;
+	display: block;
+	padding: 10px;
+	resize: none;
+	font-family: courier;
+	/* border: 1px solid #f1f1f2 */
+}
+
+.customizationArea {
+	height: 300px;
+	padding: 0px 15px;
+}
+
+.customizationText {
+	padding: 5px 15px;
+	color: #737373;
+}
+
+#errorText {
+	width: 100%;
+	border: none;
+	resize: none;
+}
+
+#errorDiv {
+	width:100%;
+	display:none;
+}
+
+#errorDiv h3 {
+	color: #666666;
+	font-size: 18px;
+}
+
+#errorDiv textarea {
+	color: red;
+	font-size: 13px;
+}
+
+#vizDiv {
+	width: 100%;
+	position: relative;
+}
+
+.container {
+	margin: 0;
+	// background: $active-color;
+	// padding: 16px 30px 40px 30px;  // Use if custom styling watson iframe
+}
+
+#taLoadingOverlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $active-color;
+	opacity: 1;
+
+	&.stopped {
+		opacity: 0;
+		-webkit-transition: opacity 1s ease-in-out;
+		-moz-transition: opacity 1s ease-in-out;
+		-o-transition: opacity 1s ease-in-out;
+		transition: opacity 1s ease-in-out;
+	}
+}
+
+@-webkit-keyframes ajax-loader-rotate {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes ajax-loader-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes ajax-loader-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+	opacity: .8;
+	display: inline-block;
+	border-radius: 50%;
+	font-size: 1.4em;
+	height: 8px;
+	width: 8px;
+	box-shadow:
+		-0.45em -.78em 0 0 rgba($primary-color,1.0),
+		-.90em 0 0 0 rgba($primary-color,0.8),
+		-.45em .78em 0 0 rgba($primary-color,0.6),
+		.45em .78em 0 0 rgba($primary-color,0.4),
+		.90em 0 0 0 rgba($primary-color,0.3),
+		.45em -.78em 0 0 rgba($primary-color,0.1);
+	-webkit-animation: 1.0s ajax-loader-rotate steps(6) infinite;
+	-moz-animation: 1.0s ajax-loader-rotate steps(6) infinite;
+	animation: 1.0s ajax-loader-rotate steps(6) infinite;
+
+	position: relative;
+	top: 50%;
+	left: 50%;
+}

@@ -1,0 +1,51 @@
+{>"layouts/master" /}
+
+{<css}
+    <link rel="stylesheet" href="/css/pages/login.css" />
+{/css}
+{<content}
+<div class="center">
+    <div class="loginPanel">
+        <img src="/images/blank.gif" class="icon-logoLoginLockup loginLogo" />
+        <div class="companyName">District Insurance</div>
+        <hr class="loginHR"/>
+        <form id="loginForm" method="post">
+            <fieldset>
+                {?messages}
+                    <ul>
+                        {#messages}
+                            <li>{.}</li>
+                        {/messages}
+                    </ul>
+                {/messages}
+                <table>
+                    <tr>
+                        <td>
+                            <span class="inputIcon">
+                                <img class="icon-usernameIcon usernameIcon" src="/images/blank.gif" />
+                            </span>
+                            <input id="username" name="username" type="text" placeholder="Username" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="inputIcon">
+                                <img class="icon-key-passwordIcon keyIcon" src="/images/blank.gif" />
+                            </span>
+                            <input id="password" name="password" type="password" placeholder="********" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="loginSubmit" type="submit" value="Log In"/>
+                            <input type="hidden" name="_csrf" value="{_csrf}"/>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+
+            </fieldset>
+        </form>
+    </div>
+</div>
+{/content}

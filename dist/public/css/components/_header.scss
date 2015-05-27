@@ -1,0 +1,112 @@
+@import "../config/_defaults";
+
+.header {
+	@include flexbox;
+	@include align-items(center);
+	@include justify-content(space-between);
+	height: 2.75em;
+	background-color: $primary-color;
+}
+
+.brand {
+	@include flexbox;
+	@include align-items(center);
+	@include justify-content(center);
+	margin-left: 15px;
+}
+
+.product {
+	font-size: 1.2em;
+	letter-spacing: .05em;
+	color: $header-font-color;
+	text-transform: uppercase;
+	font-weight: 200;
+	margin-left: 5px;
+	font-family: $company-font-family;
+}
+
+.logo {
+	width: 32px;
+	height: 22px;
+}
+
+.profile {
+	@include flexbox;
+	@include align-items(center);
+	@include justify-content(center);
+	margin-right: 50px;
+}
+
+.profilePic {
+	width: 32px;
+	height: 32px;
+	border: 1px solid $header-font-color;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.profileName {
+	color: $header-font-color;
+	font-size: 0.75em;
+	font-style: italic;
+}
+
+.profileDropDownIcon {
+	width: 21px;
+	height: 21px;
+	outline: none;
+	border: 0;
+}
+
+.profileDropDown {
+	padding: 10px 5px 10px 5px;
+	width: 70px;
+	font-size: 0.9em;
+}
+
+.profileDropDown a {
+	text-decoration: none;
+	color: $header-font-color;
+	text-transform: uppercase;
+	font-size: .9em;
+}
+
+.dropDownMenu, .dropDownMenu li ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.dropDownMenu {
+	margin-left: 5px;
+}
+
+.dropDownMenu:hover {
+	background: $secondary-color;
+}
+
+.dropDownMenu > li {
+	float: left;
+	position: relative;
+	padding: 0 10px 16px 0;
+	margin-top: 5px;
+}
+
+.dropDownMenu li a {
+	display: block;
+}
+
+.dropDownMenu li ul {
+	display: none;
+	z-index: 100;
+	width: auto;
+	position: absolute;
+	top: 39px;
+	left: -79px;
+	padding: 5px 15px 5px 15px;
+	background-color: $secondary-color;
+}
+
+.dropDownMenu li:hover ul {
+	display: block;
+}

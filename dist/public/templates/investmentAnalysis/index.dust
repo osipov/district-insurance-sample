@@ -1,0 +1,23 @@
+<div id="featuresArea" class="editArea customizationArea">
+    <textarea id="featuresText" disabled onchange="featuresTextChanged()"></textarea>
+</div>
+<div id="themeArea" class="editArea customizationArea">
+    <textarea id="themeText" disabled></textarea>
+</div>
+<div class="container watson">
+    <div id="errorDiv">
+        <h2>Oops, something went wrong...</h2>
+        <h3>Error details:</h3>
+        <textarea id="errorText" rows="8"></textarea>
+    </div>
+    <div id="vizDiv">
+        <div id="taWidgetContainer"></div>
+        <div id="taLoadingOverlay">
+            <span class="loading-spinner"></span>
+        </div>
+    </div>
+    <div id="decisionDiv" style="display: none;">
+         <h2 style="display:inline-block">And the decision is...    	</h2>
+         <h3 style="display:inline-block"id="decisionText"></h3>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+@import "../components/base";
+
+.loginLogo {
+	width: 66px;
+	height: 50px;
+}
+
+.loginPanel {
+	@include flexbox;
+	@include align-items(center);
+	@include flex-flow(column nowrap);
+	margin-top: -15%;
+}
+
+.loginHR {
+	background: $primary-font-color;
+	width: 100%;
+	border: 0;
+	height: 1px;
+	margin: 30px 0 30px 0;
+}
+
+.companyName {
+	font-family: $company-font-family;
+	font-size: 1.84em;
+	color: $submit-border-color;
+	text-transform: uppercase;
+	margin-top: 18px;
+}
+
+fieldset {
+	border: 0;
+}
+
+fieldset table tr {
+	width: 100%;
+}
+
+fieldset table td {
+	@include flexbox;
+}
+
+input {
+	font-size: 1.1em;
+	position: relative;
+	border: 0;
+	border-bottom: 4px solid grey;
+	display: inline-block;
+	margin-bottom: 10px;
+	padding: 10px;
+	height: 48px;
+	box-sizing: border-box;
+}
+
+.inputIcon {
+	background: $primary-color;
+	display: inline-block;
+	height: 34px;
+	padding: 5px;
+	width: 32px;
+	border-bottom: 4px solid $primary-border-color;
+}
+
+.usernameIcon {
+	width: 25px;
+	height: 32px;
+}
+
+.keyIcon {
+	width: 30px;
+	height: 30px;
+}
+
+.loginSubmit {
+	color: $header-font-color;
+	background: $submit-button-color;
+	border-bottom: 4px solid $submit-border-color;
+	text-transform: uppercase;
+	width: 100%;
+	margin-top: 10px;
+}

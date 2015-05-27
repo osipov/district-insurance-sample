@@ -1,0 +1,13 @@
+{>"layouts/navigation" /}
+
+{<css}
+    <link rel="stylesheet" href="/css/pages/table.css" />
+{/css}
+{<body}
+    {>"investmentList/index" /}
+{/body}
+
+{<javascript}
+    <script src="/js/utils.js"></script>
+    <script src="/js/table.js"></script>
+{/javascript}

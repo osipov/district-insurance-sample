@@ -1,0 +1,80 @@
+.well {
+	background-color: $active-color;
+}
+
+.investmentsIcon {
+	height: 26px;
+	width: 26px;
+	display: inline-block;
+}
+
+.investmentsHeader {
+	margin: 20px 0 15px 0;
+}
+
+.investmentsTitle {
+	color: $primary-font-color;
+	font-size: 1.5em;
+	margin: 0 15px 0 15px;
+	display: inline-block;
+}
+
+.dataDate {
+	color: $primary-font-color;
+	font-size: 0.75em;
+	font-style: italic;
+}
+
+#dataArea {
+	height: 100%;
+	padding: 15px;
+}
+
+#editArea, #tableArea {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+	width: 100%;
+}
+
+.editArea textArea {
+	height: 100%;
+	width: 100%;
+	display: block;
+	padding: 10px;
+	resize: none;
+	font-family: courier;
+}
+
+#tablePlaceHolder table {
+	border-collapse: collapse;
+	width: 100%;
+	color: $data-font-color;
+}
+
+#tablePlaceHolder table th {
+	font-weight: bold;
+	font-size: 1em;
+	padding: 5px 10px;
+	border-top: 2px solid $app-bg-color;
+	border-bottom: 2px solid $app-bg-color;
+	text-align: left;
+	color: $primary-font-color;
+}
+
+#tablePlaceHolder td {
+	padding: 10px;
+}
+
+#tablePlaceHolder tr.even {
+	background-color: $active-color;
+}
+
+#tablePlaceHolder tr {
+	font-size: 12px;
+}
+
+#tablePlaceHolder tr.odd {
+	background-color: $app-bg-color;
+}

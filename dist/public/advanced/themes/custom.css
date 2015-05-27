@@ -1,0 +1,1031 @@
+.moov .slider {
+  position: relative;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.moov .slider .name {
+  font-weight: bold;
+  text-align: left;
+}
+.moov .slider .range {
+  padding-bottom: 5px;
+  text-align: center;
+}
+.moov .slider .mask {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+.moov .slider .maskOn {
+  z-index: 100;
+}
+.moov .slider .maskOff {
+  z-index: -1;
+}
+.moov .slider .leftBox.mouseDown,
+.moov .slider .rightBox.mouseDown {
+  color: orange;
+}
+.moov .slider .resetBtn {
+  right: 0;
+  position: absolute;
+  font-size: 1em;
+  margin-top: 0px;
+}
+.moov .slider .resetBtn .dijitButtonNode {
+  padding-top: 0px;
+}
+.moov .slider .resetBtn .dijitIcon {
+  background-image: url("images/Reload_Icon_Grey_16x13.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 16px;
+  text-align: center;
+  width: 13px;
+  display: inline-block;
+}
+.moov .slider .histogram {
+  position: relative;
+  overflow: visible;
+  filter: inherit;
+  margin-left: 11px;
+  margin-right: 11px;
+  height: 100%;
+}
+.moov .slider .histogram .cell {
+  position: absolute;
+  filter: inherit;
+}
+.moov .slider .histogram .leftMask,
+.moov .slider .histogram .rightMask {
+  background-color: white;
+  opacity: 0.7;
+  height: 2em;
+  position: absolute;
+  top: 0px;
+  border: none;
+}
+.moov .slider .histogram .leftMask {
+  border-right: 2px orange solid;
+}
+.moov .slider .histogram .rightMask {
+  border-left: 2px orange solid;
+}
+.dijitTooltipContainer {
+  padding: 15px 15px;
+}
+.moov .solutionTooltip {
+  font-size: 1em;
+  min-width: 230px;
+  max-width: 500px;
+  display: block;
+  pointer-events: none;
+}
+.moov .solutionTooltip .title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 18px;
+  line-height: 1.45;
+  color: #333333;
+}
+.moov .solutionTooltip .actions {
+  border-bottom: 1px solid #CCC;
+}
+.moov .solutionTooltip .actions *:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+.moov .solutionTooltip .actions * {
+  margin-right: 12px;
+}
+.moov .solutionTooltip .actions .icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.moov .solutionTooltip .actions .icon svg * {
+  fill: #999999 ;
+}
+.moov .solutionTooltip .actions .actionDesc {
+  color: #999999;
+  font-size: 10px;
+  vertical-align: super;
+}
+.moov .solutionTooltip .actions .addSolutionToSelectionIcon {
+  height: 17px;
+  width: 16px;
+}
+.moov .solutionTooltip .actions .addSolutionToSelectionIcon svg .fillme {
+  fill: none;
+  stroke: #999999;
+}
+.moov .solutionTooltip .actions .removeSolutionFromSelectionIcon {
+  height: 16px;
+  width: 17px;
+}
+.moov .solutionTooltip .actions .removeSolutionFromSelectionIcon svg .fillme {
+  fill: yellow;
+  stroke: #999999;
+}
+.moov .solutionTooltip .actions .addToFavoritesIcon {
+  background-image: url("images/Favorite_Icon_18x18.png");
+  height: 18px;
+  width: 18px;
+}
+.moov .solutionTooltip .actions .removeFromFavoritesIcon {
+  background-image: url("images/Favorite_ClickedIcon_18x18.png");
+  height: 18px;
+  width: 18px;
+}
+.moov .solutionTooltip .dijitTooltipContents {
+  display: inline-block;
+}
+.moov .solutionTooltip .finalBtn {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  display: block;
+}
+.moov .solutionTooltip .description {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.moov .solutionTooltip .messages {
+  color: red;
+}
+.moov .solutionTooltip .messages .ignoreMessage {
+  display: none;
+}
+.moov .solutionTooltip .messages .errorMessage {
+  color: red;
+  font-weight: bold;
+}
+.moov .solutionTooltip .messages .warnMessage {
+  color: orange;
+}
+.moov .solutionTooltip .messages .infoMessage {
+  color: blue;
+}
+.moov .solutionTooltip .details {
+  font-weight: Bold;
+  line-height: 1.45;
+  color: #999999;
+  font-size: 13px;
+}
+.moov .solutionTooltip .solutionTooltipData {
+  padding: 3px;
+  white-space: nowrap;
+}
+.moov .solutionTooltip .solutionTooltipData .solutionTooltipDataMeasureName {
+  max-width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  margin-left: -5px;
+  margin-top: -2px;
+}
+.moov .solutionTooltip .solutionTooltipData .solutionTooltipDataMeasureValue {
+  font-style: italic;
+}
+.moov .solutionTooltip .solutionTooltipData .separator {
+  border-top: 1px solid #D3D3D3;
+  margin-top: 2px;
+}
+.moov .solutionTooltip .solutionTooltipData li {
+  font-size: xx-large;
+  line-height: 14px;
+  list-style-position: inside;
+}
+.moov .solutionTooltip .solutionTooltipData li span {
+  color: #222222;
+  font-size: 11px;
+  vertical-align: middle;
+}
+.moov .solutionTooltip .dijitTooltipContainer {
+  background: white;
+  box-shadow: 5px 5px 5px #888;
+  border: 1px solid #999;
+}
+.moov .solutionTooltip .dijitTooltipContainer,
+.moov .solutionTooltip .dijitTooltipConnector {
+  pointer-events: auto;
+}
+.moov .solutionTooltip .tooltipCloseIcon {
+  background-image: url("images/Close_Icon_Grey_12x12.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  text-align: center;
+  height: 12px;
+  width: 12px;
+  right: 7px;
+  position: absolute;
+  top: 12px;
+  cursor: pointer;
+}
+.moov .solutionTooltip .idxOneuiHoverCardActionIcons .idxOneuiHoverCardFooterButton .dijitButtonNode {
+  border: 0px;
+}
+.dj_iequircks .moov .solutionTooltip .solutionTooltipData li,
+.dj_ie8 .moov .solutionTooltip .solutionTooltipData li {
+  font-size: medium;
+}
+.moov .dijitTooltipABRight .dijitTooltipConnector {
+  right: 30px;
+}
+.moov .solutionsGrid .dojoxGridHeader {
+  display: none;
+}
+.moov .solutionsGrid .dojoxGridCell {
+  border: 0 !important;
+  padding: 5px 5px 0px 0px;
+  background-color: inherit;
+}
+.moov .solutionsGrid .dojoxGrid {
+  border: 0;
+  background-color: inherit;
+}
+.moov .solutionsGrid .dojoxGrid table {
+  border: 0;
+}
+.moov .solutionsGrid .dojoxGridRow {
+  background-color: inherit;
+  border: 0;
+}
+.moov .solutionsGrid .more {
+  width: 18px;
+  height: 18px;
+}
+.moov .solutionsGrid .dojoxGridContent {
+  overflow-y: auto;
+}
+.moov .solutionsGrid .GridCellName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  max-width: 100%;
+  display: inline-block;
+  white-space: nowrap ! important;
+  word-wrap: normal ! important;
+}
+.moov .solutionsGrid .finalDecision .GridCellName {
+  color: #00b1ef;
+  font-weight: bold;
+}
+.moov .solutionsGrid .selectedSolution .GridCellName {
+  background: yellow;
+}
+.moov .solutionsGrid .hoveredSolution,
+.moov .solutionsGrid .dojoxGridRowOver {
+  font-weight: bold;
+  background-color: inherit;
+}
+.moov .solutionsGrid .filterOut .GridCellName {
+  color: lightGray;
+  text-decoration: line-through;
+}
+.moov .solutionsGrid .bulbImg {
+  background-image: url("images/bulb_24.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 16px;
+  text-align: center;
+  width: 16px;
+  visibility: hidden;
+  display: inline-block;
+}
+.moov .solutionsGrid .dojoxGridRowOver .bulbImg {
+  visibility: visible;
+}
+.moov .solutionsGrid .favoritesImg {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 12px;
+  text-align: center;
+  width: 12px;
+  display: inline-block;
+}
+.moov .solutionsGrid .inFavoritesImg {
+  background-image: url("images/Favorite_ClickedIcon_12x12.png");
+}
+.moov .solutionsGrid .outFavoritesImg {
+  background-image: url("images/Favorite_Icon_12x12.png");
+}
+.moov .tradeoffDialog {
+  overflow: inherit;
+}
+.moov .tradeoffDialog .dijitDialogCloseIcon {
+  background: url("images/Close_Icon_Grey_12x12.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 4px;
+  height: 12px;
+  width: 12px;
+  display: block;
+  top: 5px;
+}
+.moov .tradeoffDialog .btn {
+  float: right;
+  margin-bottom: 10px;
+}
+.moov .tradeoffDialog .dijitDialogTitleBar {
+  padding-bottom: 5px;
+}
+.moov .tradeoffDialog .tradeoffContainer {
+  border-collapse: collapse;
+}
+.moov .tradeoffDialog .tradeoffContainer .stepNum {
+  font-size: 6em;
+  line-height: 0.7em;
+  font-weight: bold;
+  color: #6699CC;
+}
+.moov .tradeoffDialog .tradeoffContainer .desc {
+  color: gray;
+  vertical-align: bottom;
+}
+.moov .tradeoffDialog .tradeoffContainer .emphsize {
+  font-style: italic;
+}
+.moov .tradeoffDialog .tradeoffContainer .solutionsGrid {
+  height: 79%;
+  margin-top: 10px;
+}
+.moov .tradeoffDialog .tradeoffContainer .solutionsGrid .dojoxGrid,
+.moov .tradeoffDialog .tradeoffContainer .solutionsGrid .dojoxGridRow,
+.moov .tradeoffDialog .tradeoffContainer .solutionsGrid .dojoxGridRowTable {
+  border: 0;
+}
+.moov .tradeoffDialog .tradeoffContainer .solutionsGrid .dojoxGridCellFocus {
+  border: 0 ! important;
+}
+.moov .tradeoffDialog .tradeoffContainer .solutionsGrid .dojoxGridCell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.moov .tradeoffDialog .tradeoffContainer .firstRow {
+  border-bottom: 30px solid transparent;
+  vertical-align: top;
+}
+.moov .tradeoffDialog .tradeoffContainer .firstCol {
+  width: 200px;
+  border-right: 20px solid transparent;
+}
+.moov .tradeoffDialog .tradeoffContainer .firstRow .firstCol {
+  height: 200px;
+}
+.moov .tradeoffDialog .tradeoffContainer .secondRow .firstCol {
+  vertical-align: top;
+}
+.moov .tradeoffDialog .tradeoffContainer .secondRow .secondCol {
+  vertical-align: bottom;
+}
+.moov .tradeoffDialog .tradeoffContainer .secondRow .secondCol > div {
+  width: 50%;
+  display: inline-block;
+  float: left;
+}
+.moov .tradeoffDialog .tradeoffContainer .solLink {
+  vertical-align: middle;
+  width: 50%;
+  display: inline-block;
+}
+.moov .tradeoffDialog .tradeoffContainer .role {
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  vertical-align: middle;
+}
+.moov .tradeoffDialog .tradeoffContainer .favoritesImg {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 18px;
+  text-align: center;
+  width: 18px;
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.moov .tradeoffDialog .tradeoffContainer .inFavoritesImg {
+  background-image: url("images/Favorite_ClickedIcon_18x18.png");
+}
+.moov .tradeoffDialog .tradeoffContainer .outFavoritesImg {
+  background-image: url("images/Favorite_Icon_18x18.png");
+}
+.moov .dominated.dijitDialog {
+  overflow: inherit;
+}
+.moov .dominated .container {
+  width: 720px;
+  height: 500px;
+}
+.moov .dominated .pcWidget {
+  height: 80%;
+}
+.moov .dominated .list {
+  height: 20%;
+  overflow: auto;
+}
+.moov .dominated .dijitDialogCloseIcon {
+  background: url("images/Close_Icon_Grey_12x12.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  right: -5px;
+  height: 21px;
+  width: 21px;
+  display: block;
+  top: 5px;
+}
+.moov .dominated .optionIcon {
+  vertical-align: top;
+}
+.moov .dominated .checkboxListIcon {
+  display: inline-block;
+}
+.moov .questionEditor {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  color: #737373;
+}
+.moov .questionEditor .columnName,
+.moov .questionEditor .columnNameDropDown {
+  font-weight: bold;
+}
+.moov .questionEditor .comma {
+  position: relative;
+  left: -4px;
+  font-weight: bold;
+}
+.moov .questionEditor .columnNameDropDown {
+  vertical-align: baseline;
+  cursor: pointer;
+}
+.moov .questionEditor .columnNameDropDown .dijitArrowButtonInner {
+  width: 0px;
+}
+.moov .questionEditor .columnNameDropDown a:hover {
+  text-decoration: none;
+}
+.moov .questionEditor .columnNameMenuItem {
+  font-size: 20px;
+  color: #00649d;
+}
+.moov .questionEditor .objectivesWidget {
+  width: 100%;
+}
+.moov .questionEditor .toggleableGoal {
+  cursor: pointer;
+}
+.moov .questionEditor .minMaxText {
+  font-style: italic;
+}
+.moov .questionEditor .Add {
+  vertical-align: middle;
+  cursor: pointer;
+  color: #00b1ef;
+  display: inline-block;
+}
+.moov .questionEditor .removeIcon {
+  cursor: pointer;
+}
+.moov .questionEditor .removeIcon svg {
+  position: relative;
+  top: 3px;
+}
+.moov .questionEditor .removeIcon svg .removeBtn {
+  stroke: #00b1ef;
+}
+.moov .smallQuestionEditor {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Normal;
+  line-height: 1.45;
+  padding: 15px;
+  width: 100%;
+  background-color: #fafafa;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #e3e4e6;
+}
+.moov .smallQuestionEditor .textAfterColumnName {
+  padding-left: 0.3em;
+  display: inline-block;
+}
+.moov .smallQuestionEditor .smallColumnNameMenuItem {
+  font-size: 125%;
+  color: #00649d;
+}
+.moov .smallQuestionEditor .singleObjective {
+  display: inline-block;
+  padding-right: 3px;
+}
+.moov .smallQuestionEditor .Add {
+  padding-left: 0.3em;
+  vertical-align: baseline;
+}
+.moov {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+.moov .moovContainer {
+  padding: 0px;
+  margin: 0px;
+  z-index: 0;
+  min-width: 700px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.moov .moovContainer .removeBtn {
+  stroke: #00F;
+  fill: none;
+  stroke-width: 6px;
+}
+.moov .moovContainer .topHeader {
+  background-color: #004165;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #ffffff;
+}
+.moov .moovContainer .topHeader *:hover,
+.moov .moovContainer .topHeader *:visited,
+.moov .moovContainer .topHeader *:link {
+  color: inherit;
+}
+.moov .moovContainer .topHeader .logo {
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+  height: 18px;
+  width: 100px;
+  background-image: url("images/MOOV_Watson_Logo.png");
+  float: left;
+  margin-top: 3px;
+  margin-right: 10px;
+}
+.moov .moovContainer .topHeader .actionsButtonsBar {
+  float: left;
+  border-left: 1px #FFF solid;
+}
+.moov .moovContainer .topHeader .actionsButtonsBar .icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+}
+.moov .moovContainer .topHeader .actionsButtonsBar .dijitButtonDisabled {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+  -moz-opacity: 0.2;
+  -khtml-opacity: 0.2;
+  opacity: 0.2;
+}
+.moov .moovContainer .topHeader .actionsButtonsBar .dijitButton .dijitButtonNode {
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+}
+.moov .moovContainer .topHeader .actionsButtonsBar .undoIcon {
+  height: 15px;
+  width: 11px;
+  background-image: url("images/BackArrow_Icon_11x15.png");
+}
+.moov .moovContainer .topHeader .actionsButtonsBar .redoIcon {
+  height: 15px;
+  width: 11px;
+  background-image: url("images/RedoArrow_Icon_11x15.png");
+}
+.moov .moovContainer .topHeader .actionsButtonsBar .resetAllIcon {
+  height: 13px;
+  width: 16px;
+  background-image: url("images/Reload_Icon_16x13.png");
+}
+.moov .moovContainer .topHeader .actionsButtonsBar .clearFavoritesIcon {
+  height: 12px;
+  width: 12px;
+  background-image: url("images/Close_Icon_White_12x12.png");
+}
+.moov .moovContainer .topHeader .actionsButtonsBar .focusIcon {
+  height: 16px;
+  width: 17px;
+  background-image: url("images/Magnifying_glass.png");
+}
+.moov .moovContainer .topHeader .breadCrumbs {
+  padding-left: 20px;
+  display: -webkit-box;
+}
+.moov .moovContainer .topHeader .breadCrumbs > * {
+  vertical-align: middle;
+  display: inline-block;
+  margin-top: 6px;
+}
+.moov .moovContainer .topHeader .breadCrumbs .separaor {
+  background-image: url("images/Breadcrumb_Triangle_Icon_5x7.5.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 8px;
+  text-align: center;
+  width: 6px;
+  margin-left: 5px;
+}
+.moov .moovContainer .topHeader .breadCrumbs .step .selected {
+  font-weight: bold;
+}
+.moov .moovContainer .topHeader .finalDecisionArea {
+  height: 100%;
+  margin: 0px;
+  width: auto;
+  float: right;
+}
+.moov .moovContainer .topHeader .finalDecisionArea a {
+  font-weight: bold;
+  color: #00b1ef;
+}
+.moov .moovContainer .topHeader .finalDecisionArea input {
+  margin-left: 12px;
+}
+.moov .moovContainer .topHeader .finalDecisionArea .finalDecision {
+  color: #ffffff;
+}
+.moov .moovContainer .topHeader .finalDecisionArea .finalDecision .removeFinalDecLink {
+  display: none;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+.moov .moovContainer .topHeader .finalDecisionArea .finalDecision .removeFinalDecLink .removeBtn {
+  stroke: #00b1ef;
+}
+.moov .moovContainer .topHeader .finalDecisionArea .finalDecisionActive .removeFinalDecLink {
+  display: inline-block;
+}
+.moov .moovContainer .topHeader .atLeastTwoObjectivesMsgDiv {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 2em;
+  display: none;
+}
+.moov .moovContainer .moovBody {
+  overflow: hidden;
+  padding: 0px;
+}
+.moov .moovContainer .moovBody .no-tabs .dijitTabPane {
+  padding: 0;
+}
+.moov .moovContainer .moovBody .interiorContainer {
+  padding: 0px;
+  margin: 0px;
+  z-index: 0;
+}
+.moov .moovContainer .moovBody .interiorContainer .mainTabContainer {
+  padding-top: 12px;
+  width: 100%;
+  min-width: 70%;
+  height: 100%;
+  top: 0;
+}
+.moov .moovContainer .moovBody .interiorContainer .mainTabContainer .dijitTab {
+  border: 0px;
+  color: #ffffff;
+  margin: 0px;
+  background: #00b1ef;
+}
+.moov .moovContainer .moovBody .interiorContainer .mainTabContainer .dijitTabChecked,
+.moov .moovContainer .moovBody .interiorContainer .mainTabContainer .dijitTabCheckedHover {
+  border: 0px;
+  margin: 0;
+  background-image: none;
+  filter: none;
+  bottom: 0;
+  background-color: #004165;
+  color: #ffffff;
+  cursor: default;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+.moov .moovContainer .moovBody .interiorContainer .mainTabContainer .dijitTabContainerTop-dijitContentPane {
+  padding-top: 20px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.moov .moovContainer .moovBody .interiorContainer .mainTabContainer .dijitTabPaneWrapper {
+  border: 0;
+}
+.moov .moovContainer .moovBody .interiorContainer .mainTabContainer .dijitTabContainerTop-tabs {
+  border-bottom: 2px solid #e3e4e6;
+}
+.moov .moovContainer .moovBody .interiorContainer .mainTabContainer .dijitTabContainerTop-tabs .dijitTabContent {
+  border-radius: 0;
+  border-width: 1px;
+  border-color: #e3e4e6;
+  border-style: solid;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.moov .moovContainer .moovBody .filtersPane {
+  width: 20%;
+  max-width: 200px;
+}
+.moov .moovContainer .moovBody .filtersPane .dijitTitlePaneContentInner {
+  padding: 5px;
+}
+.moov .moovContainer .moovBody .filtersPane .dijitTitlePaneContentInner .design-space-separator {
+  padding-top: 5px;
+  color: #878E8E;
+  padding-left: 10px;
+}
+.moov .moovContainer .moovBody .filtersPane .dijitTitlePaneContentInner .wrapper {
+  border: 1px solid #DDD;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.moov .moovContainer .moovBody .filtersPane .dijitTitlePaneContentOuter {
+  overflow: auto;
+}
+.moov .moovContainer .moovBody .explorePane .viewsButtonsBar {
+  padding: 0;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.moov .moovContainer .moovBody .explorePane .viewsButtonsBar .dijitIcon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 24px;
+  text-align: center;
+  width: 24px;
+  border-bottom: white 2px solid;
+}
+.moov .moovContainer .moovBody .explorePane .viewsButtonsBar .dijitIcon.viewCheckedIcon,
+.moov .moovContainer .moovBody .explorePane .viewsButtonsBar .dijitButtonHover .dijitIcon {
+  border-bottom: #008abf 2px solid;
+}
+.moov .moovContainer .moovBody .explorePane .viewsButtonsBar .dijitButton {
+  margin: 0;
+}
+.moov .moovContainer .moovBody .explorePane .viewsButtonsBar .dijitButton .dijitButtonNode {
+  background: transparent;
+  box-shadow: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  color: black;
+  padding: 0px;
+  margin: 0px;
+}
+.moov .moovContainer .moovBody .explorePane .viewsButtonsBar .leftButton .sommosButtonIcon {
+  background-image: url("images/sommos24.png");
+}
+.moov .moovContainer .moovBody .explorePane .viewsButtonsBar .leftButton .dijitButton .dijitButtonNode {
+  border-right-width: 0px;
+}
+.moov .moovContainer .moovBody .explorePane .viewsButtonsBar .rightButton .dijitButton .dijitButtonNode {
+  border-left-width: 1px;
+  border-left-color: #eeeeee;
+}
+.moov .moovContainer .moovBody .explorePane .viewsButtonsBar .rightButton .pcButtonIcon {
+  background-image: url("images/parallel24.png");
+}
+.moov .moovContainer .moovBody .explorePane .moovSommosPane {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.moov .moovContainer .moovBody .explorePane .moovSommosPane .sommos svg {
+  height: 100%;
+  width: 100%;
+}
+.moov .moovContainer .moovBody .explorePane .moovPCWidget {
+  height: 61.728%;
+  width: 100%;
+  overflow: hidden;
+}
+.moov .moovContainer .moovBody .explorePane .statusLine .statusCount {
+  color: #878e8e;
+}
+.moov .moovContainer .moovBody .explorePane .statusLine .statusText {
+  color: #878e8e;
+}
+.moov .moovContainer .moovBody .explorePane .rightPane {
+  padding: 0px;
+  overflow: auto;
+}
+.moov .moovContainer .moovBody .explorePane .rightPane .paneDesc {
+  font-size: 11px;
+  padding: 0;
+  padding-bottom: 6px;
+}
+.moov .moovContainer .moovBody .explorePane .rightPane .optimalsPane,
+.moov .moovContainer .moovBody .explorePane .rightPane .dominatedPane,
+.moov .moovContainer .moovBody .explorePane .rightPane .erroneousPane {
+  width: 100%;
+  height: 250px;
+}
+.moov .moovContainer .moovBody .explorePane .rightPane .dijitTitlePane .dijitArrowNode {
+  height: 8px;
+  width: 7px;
+  background-position: 0;
+}
+.moov .moovContainer .moovBody .explorePane .rightPane .dijitTitlePane .dijitClosed .dijitArrowNode {
+  background-image: url("images/DropdownTriangle_Icon_5x7.5.png");
+}
+.moov .moovContainer .moovBody .explorePane .rightPane .dijitTitlePane .dijitOpen .dijitArrowNode {
+  background-image: url("images/DropdownTriangle_down_Icon_5x7.5.png");
+}
+.moov .moovContainer .dijitTitlePaneTitle {
+  background-color: #e6f7fd ! important;
+  color: #878e8e;
+  padding: 12px 15px;
+  border-width: 1px #e3e4e6 solid;
+}
+.moov .moovContainer .dijitTitlePaneTitle .dijitTitlePaneTitleFocus {
+  background: inherit;
+}
+.moov .moovContainer .dijitTitlePaneTitle .dijitTitlePaneContentInner {
+  background-color: #ffffff;
+  color: #737373;
+  border-width: 1px #e3e4e6 solid;
+  padding-top: 8px;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.moov .placeholders .highlightPlaceholder {
+  color: yellow;
+}
+.moov .placeholders .finalDecisionPlaceholder {
+  color: #00b1ef;
+}
+.moov .placeholders .mapFramePlaceholder {
+  color: #00b1ef;
+}
+.moov .placeholders .mapFillPlaceholder {
+  color: #ffffff;
+}
+.moov *:focus {
+  outline: 0;
+}
+.moov .btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0);
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.428571429;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: .15s;
+  transition: .15s;
+  color: #00b1ef;
+  background-color: #ffffff;
+  border-color: #00B2EF;
+}
+.moov .btn:focus,
+.moov .btn:active:focus,
+.moov .btn.active:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.moov .btn:hover,
+.moov .btn:focus {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #00b1ef;
+}
+.moov .btn:active,
+.moov .btn.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.moov .btn.disabled,
+.moov .btn[disabled],
+.moov fieldset[disabled] .btn {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.moov .dijitButton .dijitButtonNode {
+  min-width: 0px;
+  padding-top: 1px;
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+  border: 0px;
+}
+.moov .disabledLink {
+  pointer-events: none;
+  cursor: default;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+}
+.moov .dijitbuttonnode {
+  border: 0px;
+}
+.moov .dijitButtonFocused .dijitButtonNode,
+.moov .dijitToggleButtonFocused .dijitButtonNode {
+  outline: none;
+}
+.moov .truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.moov .transparent {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+.moov .idxHeaderContainer .idxHeaderPrimary .idxHeaderPrimaryTitle,
+.moov .idxHeaderContainer .idxHeaderPrimary .idxHeaderUserName {
+  filter: none;
+}
+.moov .emptyMessage {
+  font-size: xx-large;
+  color: gray;
+  font-style: italic;
+}
+.moov div.idxAppMarqueeRight {
+  display: none;
+}
+.moov .vertical {
+  transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+}
+.moov .dojoxGridScrollbox {
+  background-color: inherit;
+}
+.moov .dijitDialogHover {
+  background-color: white;
+}
+
+/** Customizations **/
+.topHeader {
+    display: none;
+}
+
+.moov .smallQuestionEditor {
+    background-color: #ffffff;
+}
+
+.moov .moovContainer .dijitTitlePaneTitle {
+    background-color: white !important;
+    border: 0;
+}
+
+.moov .smallQuestionEditor {
+    font-size: 18px;
+    color: #909b9b;
+    font-weight: 400;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.moov .questionEditor .objectivesWidget {
+    font-size: 14px;
+    margin: 16px 0;
+}
+
+.oneui .dijitTitlePaneContentOuter {
+    border: 0;
+}
+
+.moov .moovContainer .moovBody .filtersPane {
+    border-right: 1px solid #e3e4e6;
+}
+
+.oneui .dijitContentPane .centerContainer {
+    padding-right: 20px;
+}

@@ -1,0 +1,22 @@
+{>"layouts/master" /}
+
+{<content}
+    <div class="tricolumn">
+        <nav id="appNav">
+            <a href="#"><img src="/images/blank.gif" class="icon-homeIcon" /></a>
+            <a href="#"><img src="/images/blank.gif" class="icon-personIcon" /></a>
+
+<!-- ACT I BEGIN -->
+            <a href="/table"><img src="/images/blank.gif" class="icon-list-investmentsIcon" /></a>
+<!-- ACT I END-->
+<!-- ACT II BEGIN -->
+            <a href="/investment"><img src="/images/blank.gif" class="icon-investmentsIcon" /></a>
+<!-- ACT II END -->
+
+            <a href="/calculator"><img src="/images/blank.gif" class="icon-calculatorIcon" /></a>
+        </nav>
+        <div id="wrapper" class="content">
+            {+body /}
+        </div>
+    </div>
+{/content}

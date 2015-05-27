@@ -1,0 +1,38 @@
+{>"layouts/navigation" /}
+
+{<css}
+    <link rel="stylesheet" href="/css/pages/investment.css" />
+{/css}
+
+{<body}
+    <div id="investmentContainer">
+        <div>
+            <ul id="tabs">
+                <li id="tabHeader_1" class="tabActive" data-tab-page="tabpage_1">
+                    <img class="icon-watson-analysisIcon watsonIcon" src="/images/blank.gif" />
+                    <span class="tabTitle">Investment Analysis</span>
+                </li>
+                <li id="tabHeader_2" data-tab-page="tabpage_2">
+                    <img class="icon-list-investmentsIconDark listIcon" src="/images/blank.gif" />
+                    <span class="tabTitle">Investment List</span>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <div class="tabpage" id="tabpage_1">
+                {>"investmentAnalysis/index" /}
+            </div>
+            <div class="tabpage hidden" id="tabpage_2">
+                {>"investmentList/index" /}
+            </div>
+        </div>
+    </div>
+{/body}
+
+{<javascript}
+    <script src="/js/utils.js"></script>
+    <script src="/js/investment.js"></script>
+    <script src="/js/table.js"></script>
+    <script src="http://ta-cdn.mybluemix.net/TradeoffAnalytics.js"></script>
+    <script src="/js/tradeoff.js"></script>
+{/javascript}

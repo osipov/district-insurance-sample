@@ -1,0 +1,40 @@
+$primary-color: #07B5A0;
+$primary-border-color: #109882;
+$secondary-color: #142935;
+$active-color: #ffffff;
+$inactive-color: #e7e8e9;
+$app-bg-color: #f3f3f4;
+$separator-color: #474f59;
+$submit-button-color: #1b3649;
+$submit-border-color: #345A74;
+
+$primary-font-color: #909b9b;
+$header-font-color: #ffffff;
+$data-font-color: #4c4353;
+
+$primary-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$company-font-family: "Montserrat", $primary-font-family;
+
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background: $app-bg-color;
+	font-family: $primary-font-family;
+	height: 100%;
+	color: $primary-font-color;
+}
+
+.hidden {
+	display: none;
+}
+
+.center {
+	@include flexbox;
+	@include align-items(center);
+	@include justify-content(center);
+	width: 100%;
+	height: 100%;
+}
