@@ -11,7 +11,7 @@ ifeq ($(origin IMAGE), undefined)
 export IMAGE := $(shell read -p "Image [$(IMAGE_DEFAULT)]: " tmp; echo $${tmp:-'$(IMAGE_DEFAULT)'})	
 endif
 
-build-release-local: .interactive-deploy-cf
+build-release-local: .interactive-local-deploy-cf
 	@make IMAGE=$(NAME) -j 1 -f scripts/build/Makefile build-local rerun-local
 
 build-release-bluemix: .interactive-deploy-cf .setup-ics .login-ics
