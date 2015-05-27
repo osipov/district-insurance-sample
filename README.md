@@ -81,3 +81,8 @@ A developer comes to the rescue. Using Bluemix to discover and add the tradeoff 
 Act II
 
 The sales person loads the latest and greatest version of the application. Returning to the customer, the sales person is now armed with a powerful analytics and visualization framework enabling a richer dialog with the customer about the range of product options.
+
+Ackowledgements
+---------------
+
+Huge thanks to members of my team, Drew and Javier for implementing the vast majority of the code in this demo and Tarun's team for putting together the UI look and feel. I couldn't have done this without you! Also, special thanks to @dancberg and @jrmcgee for supporting the effort to build this demo and showing it off on stage at Interconnect 2015!
