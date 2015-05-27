@@ -1,11 +1,24 @@
 Setup
 -----
 
-To get started, enter your boot2docker environment with
+The following instructions will help you run the demo in a [Docker Machine](https://github.com/osipov/district-insurance-sample/blob/master/README.md#option-1-local-docker-machine). You can also use IBM DevOps or an interactive deploy from your command line. 
 
-	boot2docker ssh
+Make sure you have an IBM Bluemix account. You can get one here: https://apps.admin.ibmcloud.com/manage/trial/bluemix.html
 
-and install required command line tools using the following
+Option 1. Local Docker Machine
+--------------------
+
+If you don't have Docker Machine installed, you can find out how to install one here: https://docs.docker.com/machine/#installation
+
+To get started, enter your Docker Machine environment with
+
+	docker-machine ssh
+
+Check out the latest version of the code using
+
+	git clone https://github.com/osipov/district-insurance-sample.git
+
+and install the required command line tools using the following
 
 	tce-load -wi make
 
@@ -15,35 +28,16 @@ and install required command line tools using the following
 	tce-load -wi python
 	curl https://bootstrap.pypa.io/get-pip.py -o - | sudo python
 	curl https://bootstrap.pypa.io/ez_setup.py -o - | sudo python
-	curl -O https://static-ice.ng.bluemix.net/icecli-1.0.zip
-	sudo pip install icecli-1.0.zip
-
-Download the latest version of the code using
-
-	git clone -b tradeoff https://hub.jazz.net/git/jhpedemonte/node_docker_sample; cd node_docker_sample
-
-and provide your JazzHub credentials as needed.
-
-There are two non-mutually exclusive options to host the code Option 1) local Docker container; or Option 2) Bluemix Container Service
-
-Deploy
-------
-
-Option 1. Deploy to a local Docker container
-
-Add Tradeoff Analytics service credentials to your environment 
-
-	export TA_URL=https://gateway.watsonplatform.net/tradeoff-analytics-beta/api TA_USER=d37e8c57-6b27-4c77-ae38-7e0c0d343f40 TA_PASS=ppxm1EVy80Yr
-
-You can also edit the [scripts/SETTINGS.mk](https://hub.jazz.net/project/jhpedemonte/node_docker_sample/overview#https://hub.jazz.net/gerrit/plugins/gerritfs/contents/jhpedemonte%252Fnode_docker_sample/refs%252Fheads%252Ftradeoff/scripts/SETTINGS.mk) file instead to avoid having to re-export the variables again.
+	curl -O https://static-ice.ng.bluemix.net/icecli-2.0.zip
+	sudo pip install icecli-2.0.zip
 
 Run the build and deploy process
 
 	make build-release-local
 
-When prompted for the image name (defaults to ice-pipeline-demo), you can hit enter to accept the default or type in your own.
+When prompted for the image name (defaults to district-insurance-sample), you can hit enter to accept the default or type in your own.
 
-The default run scenario maps the container port 80 to host port 8080, so depending on the port forwarding configuration of your boot2docker environment, the application should be accessible from 
+The default run scenario maps the container port 80 to host port 8080, so depending on the port forwarding configuration of your Docker Machine environment, the application should be accessible from 
 
 	http://localhost:8080/
 
