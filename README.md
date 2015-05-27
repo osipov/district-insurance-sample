@@ -5,7 +5,7 @@ Make sure you have an IBM Bluemix account. You can get one here: https://apps.ad
 
 The following instructions will help you run the demo in a [Docker Machine](https://github.com/osipov/district-insurance-sample/blob/master/README.md#option-1-local-docker-machine). You can also use IBM DevOps or an interactive deployment to IBM Container Service from your command line. 
 
-Option 1. Local Docker Machine
+Option 1. Docker or Docker Machine
 --------------------
 
 If you don't have Docker Machine installed, you can find out how to install one here: https://docs.docker.com/machine/#installation
@@ -35,7 +35,7 @@ Change directory to district-insurance-sample and run the build and deploy proce
 
 	make build-release-local
 
-When prompted for the image name (defaults to district-insurance-sample), you can hit enter to accept the default or type in your own. You will also be prompted to use your Bluemix credentials to login and to note credentials for Tradeoff Analytics shown as a JSON string. You will have to enter these credentials as part of the deploy process.
+When prompted for the image name (defaults to district-insurance-sample), you can hit enter to accept the default or type in your own. You will also be prompted to use your Bluemix credentials to login. Please note the credentials for Tradeoff Analytics shown as a JSON string. You will have to enter these credentials as part of the deploy process.
 
 The default deployment maps the container port 80 to host port 8080, so depending on the port forwarding configuration of your environment, the application should be accessible from your Docker Machine IP address which you can check using
 
@@ -49,15 +49,29 @@ where you can login using bob / secret
 
 The scenario is described in more detail in the [Demo](https://github.com/osipov/district-insurance-sample/blob/master/README.md#demo) section.
 
-Option 2. Deploy to the Bluemix Container Service
+Option 2. Deploy to the IBM Container Service from a command line
+-------------------------------------------------
+*NOTE* These steps will only work on Linux or OS X. If you are running Windows, you should use the Docker Machine option described earlier.
 
-**NOTE**: It is highly recommended that you create a dedicated organization and/or space under your Bluemix account just for the purposes of this demo. The release stage of the pipeline will attempt to create a new Container Service instance for you, which will fail if you have already provisioned a Container Service. It is possible to have multiple Container Service spaces in your organization, one per each space. You will be prompted to choose a space where to provision this demo during the Cloud Foundry login process.
+Download and install IBM Bluemix (Cloud Foundry) and IBM Container Service clients. The Cloud Foundry CLI is available for your platform from: https://github.com/cloudfoundry/cli#downloads
 
-Start the process to build and to deploy to Bluemix:
+You can download the IBM Container Service client from https://static-ice.ng.bluemix.net/icecli-2.0.zip
+
+If you are using PIP, you can install using 
+
+	sudo pip install icecli-2.0.zip
+
+otherwise you'll have to unzip and install the client manually.
+
+Check out the latest version of the code using
+
+	git clone https://github.com/osipov/district-insurance-sample.git
+
+Start the process to build and to deploy to IBM Bluemix / Container Service:
 
 	make build-release-bluemix
 
-When prompted for the image name (defaults to ice-pipeline-demo) and the Bluemix Cloud Foundry API endpoint (defaults to https://api.ng.bluemix.net) you can hit enter to accept the defaults or type in your own.
+When prompted for the image name (defaults to district-insurance-sample) and the Bluemix Cloud Foundry API endpoint (defaults to https://api.ng.bluemix.net) you can hit enter to accept the defaults or type in your own.
 
 When prompted by the cf login command use your Bluemix credentials to login. Specify the organization and space where to deploy the application.
 
@@ -66,6 +80,12 @@ The release process will remind you to make sure there are no conflicting Contai
 Once the Container Service is created, follow the instructions to obtain the Container Service API key and enter it when prompted. Note the IP address provided by the Container Service and enter it when prompted. **WARNING**: it is likely that this step will fail due to high demand for the Container Service.
 
 Once the IP address is provided, use it to login to http://<ip> with bob / secret as credentials.
+
+
+Option 3. IBM DevOps Delivery Pipeline
+--------------------------------------
+
+
 
 Demo
 ----
