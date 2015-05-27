@@ -31,7 +31,7 @@ and install the required command line tools using the following
 	curl -O https://static-ice.ng.bluemix.net/icecli-2.0.zip
 	sudo pip install icecli-2.0.zip
 
-Run the build and deploy process
+Change directory to district-insurance-sample and run the build and deploy process
 
 	make build-release-local
 
