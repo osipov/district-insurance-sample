@@ -4,7 +4,7 @@ Setup
 Make sure you have an IBM Bluemix account. You can get one here: https://apps.admin.ibmcloud.com/manage/trial/bluemix.html
 
 The easiest way to get started with the application is to click the following button
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/cosipov/district-insurance-sample-1.git)
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/osipov/district-insurance-sample.git)
 
 If you already have access to a running version of the application, you can skip to the demonstration scenario as described in the [Demo](https://github.com/osipov/district-insurance-sample/blob/master/README.md#demo) section.
 
@@ -128,7 +128,7 @@ Demo
 
 Act I
 
-The scenario begins with the sales person starting a discussion with an insurance/financial customer about retirement plans and insurance risks. The sales person logs in to the application (use bob/secret) and opens the planning calculator (http://\<ip\>/calculator). Calculations about the financial situation of the customer leads the sales person to offer a range of company's products to the customer. The sales person opens the product list using the left hand side menu (http://<<ip>>/table). However the product list is very long and detailed. The customer doesn't know what to choose. Summary of pain points.
+The scenario begins with the sales person starting a discussion with an insurance/financial customer about retirement plans and insurance risks. The sales person logs in to the application (use bob/secret) and opens the planning calculator (http://\<ip\>/calculator). Calculations about the financial situation of the customer leads the sales person to offer a range of company's products to the customer. The sales person opens the product list using the left hand side menu (http://\<ip\>/table). However the product list is very long and detailed. The customer doesn't know what to choose. Summary of pain points.
 
 Scene change. 
 
