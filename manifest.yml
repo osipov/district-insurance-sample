@@ -1,0 +1,10 @@
+---
+declared-services: 
+  tradeoff_analytics_instance: 
+    label: tradeoff_analytics 
+    plan: free
+applications:
+- name: district-insurance-sample
+  command: node dist/server.js
+  services:
+  - tradeoff_analytics_instance    
