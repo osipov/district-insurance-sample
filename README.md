@@ -57,7 +57,7 @@ The scenario is described in more detail in the [Demo](https://github.com/osipov
 
 Deploy to the IBM Container Service from a command line
 -------------------------------------------------
-*NOTE* These steps will only work on Linux or OS X. If you are running Windows, you should use the Docker Machine option described earlier.
+**NOTE** These steps will only work on Linux or OS X. If you are running Windows, you should use the Docker Machine option described earlier.
 
 Download and install IBM Bluemix (Cloud Foundry) and IBM Container Service clients. The Cloud Foundry CLI is available for your platform from: https://github.com/cloudfoundry/cli#downloads
 
