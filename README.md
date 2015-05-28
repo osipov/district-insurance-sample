@@ -5,7 +5,7 @@ Make sure you have an IBM Bluemix account. You can get one here: https://apps.ad
 
 The following instructions will help you run the demo in a [Docker Machine](https://github.com/osipov/district-insurance-sample/blob/master/README.md#option-1-local-docker-machine). You can also use IBM DevOps or an interactive deployment [directly to IBM Container Service from your command line](https://github.com/osipov/district-insurance-sample#option-2-deploy-to-the-ibm-container-service-from-a-command-line). 
 
-Option 1. Docker or Docker Machine
+Option 1. Docker Machine
 --------------------
 
 If you don't have Docker Machine installed, you can find out how to install one here: https://docs.docker.com/machine/#installation
@@ -102,7 +102,7 @@ Act II
 
 The sales person loads the latest and greatest version of the application. Returning to the customer, the sales person is now armed with a powerful analytics and visualization framework enabling a richer dialog with the customer about the range of product options.
 
-Ackowledgements
+Aknowledgements
 ---------------
 
 Huge thanks to members of my team, Drew and Javier for implementing the vast majority of the code in this demo and Tarun's team for putting together the UI look and feel. I couldn't have done this without you! Also, special thanks to @dancberg and @jrmcgee for supporting the effort to build this demo and showing it off on stage at Interconnect 2015!
