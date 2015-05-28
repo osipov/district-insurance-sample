@@ -1,3 +1,5 @@
+To access a running version of this application, skip forward to the demonstration scenario as described in the [Demo](https://github.com/osipov/district-insurance-sample/blob/master/README.md#demo) section. To create your own instance of the demo, follow the instructions below.
+
 Setup
 -----
 
@@ -5,8 +7,6 @@ Make sure you have an IBM Bluemix account. You can get one here: https://apps.ad
 
 The easiest way to get started with the application is to click the following button
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/osipov/district-insurance-sample.git)
-
-If you already have access to a running version of the application, you can skip to the demonstration scenario as described in the [Demo](https://github.com/osipov/district-insurance-sample/blob/master/README.md#demo) section.
 
 You can also run this demo in a [Docker Machine](https://github.com/osipov/district-insurance-sample#run-in-a-docker-machine). If you are willing to do some configuration you can also deploy to IBM Container Services using [IBM DevOps ](https://github.com/osipov/district-insurance-sample#deploy-with-the-ibm-devops-delivery-pipeline) or do an interactive deployment [directly to IBM Container Service from your command line](https://github.com/osipov/district-insurance-sample#deploy-to-the-ibm-container-service-from-a-command-line). 
 
@@ -125,9 +125,11 @@ Login using bob/secret as the credentials.
 Demo
 ----
 
+A running version of the application is available [here](http://district-insurance-sample-osipov-1541.mybluemix.net/login). Use bob/secret to login.
+
 Act I
 
-The scenario begins with the sales person starting a discussion with an insurance/financial customer about retirement plans and insurance risks. The sales person logs in to the application (use bob/secret) and opens the planning calculator (http://\<ip\>/calculator). Calculations about the financial situation of the customer leads the sales person to offer a range of company's products to the customer. The sales person opens the product list using the left hand side menu (http://\<ip\>/table). However the product list is very long and detailed. The customer doesn't know what to choose. Summary of pain points.
+The scenario begins with the sales person starting a discussion with an insurance/financial customer about retirement plans and insurance risks. The sales person logs in to the application (use bob/secret) and opens the planning calculator (http://\<host\>/calculator). Calculations about the financial situation of the customer leads the sales person to offer a range of company's products to the customer. The sales person opens the product list using the left hand side menu (http://\<host\>/table). However the product list is very long and detailed. The customer doesn't know what to choose. Summary of pain points.
 
 Scene change. 
 
