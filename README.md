@@ -8,7 +8,7 @@ The easiest way to get started with the application is to click the following bu
 
 If you already have access to a running version of the application, you can skip to the demonstration scenario as described in the [Demo](https://github.com/osipov/district-insurance-sample/blob/master/README.md#demo) section.
 
-You can also run this demo in a [Docker Machine](https://github.com/osipov/district-insurance-sample/blob/master/README.md#option-1-local-docker-machine). If you are willing to do some configuration you can also use [IBM DevOps](https://github.com/osipov/district-insurance-sample#option-3-ibm-devops-delivery-pipeline) or do an interactive deployment [directly to IBM Container Service from your command line](https://github.com/osipov/district-insurance-sample#option-2-deploy-to-the-ibm-container-service-from-a-command-line). 
+You can also run this demo in a [Docker Machine](https://github.com/osipov/district-insurance-sample#run-in-a-docker-machine). If you are willing to do some configuration you can also deploy to IBM Container Services using [IBM DevOps ](https://github.com/osipov/district-insurance-sample#deploy-with-the-ibm-devops-delivery-pipeline) or do an interactive deployment [directly to IBM Container Service from your command line](https://github.com/osipov/district-insurance-sample#deploy-to-the-ibm-container-service-from-a-command-line). 
 
 
 Run in a Docker Machine
