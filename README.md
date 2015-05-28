@@ -128,11 +128,11 @@ Demo
 
 Act I
 
-The scenario begins with the sales person starting a discussion with an insurance/financial customer about retirement plans and insurance risks. The sales person logs in to the application (use bob/secret) and opens the planning calculator (http://<<ip>>/calculator). Calculations about the financial situation of the customer leads the sales person to offer a range of company's products to the customer. The sales person opens the product list using the left hand side menu (http://<<ip>>/table). However the product list is very long and detailed. The customer doesn't know what to choose. Summary of pain points.
+The scenario begins with the sales person starting a discussion with an insurance/financial customer about retirement plans and insurance risks. The sales person logs in to the application (use bob/secret) and opens the planning calculator (http://\<ip\>/calculator). Calculations about the financial situation of the customer leads the sales person to offer a range of company's products to the customer. The sales person opens the product list using the left hand side menu (http://<<ip>>/table). However the product list is very long and detailed. The customer doesn't know what to choose. Summary of pain points.
 
 Scene change. 
 
-A developer comes to the rescue. Using Bluemix to discover and add the tradeoff analytics service to the application, the developer then opens the [source code](https://hub.jazz.net/project/jhpedemonte/node_docker_sample/overview#https://hub.jazz.net/gerrit/plugins/gerritfs/contents/jhpedemonte%252Fnode_docker_sample/refs%252Fheads%252Ftradeoff/dist/public/templates/layouts/navigation.dust) and changes the UI (the link with the investmentsIcon (not list-investmentsIcon) should change from pointing to /table to point to /investment) to take advantage of the new service. The developer relies on Docker to rapidly package and deploy the application. 
+A developer comes to the rescue. Using Bluemix to discover and add the tradeoff analytics service to the application, the developer then opens the [source code](https://github.com/osipov/district-insurance-sample/blob/master/dist/public/templates/layouts/navigation.dust) and changes the UI (the link with the investmentsIcon (not list-investmentsIcon) should change from pointing to /table to point to /investment) to take advantage of the new service. The developer relies on Docker to rapidly package and deploy the application. 
 
 Act II
 
