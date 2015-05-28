@@ -83,13 +83,12 @@ When prompted by the cf login command use your Bluemix credentials to login. Spe
 
 The release process will remind you to make sure there are no conflicting Container Service instances in your organization. It will also deploy a NOOP app to integrate the demo application with the Tradeoff Analytics service.
 
-You will be prompted to provide the Container Service image registry URL.
+You will be prompted to provide the Container Service image registry URL. You can find this URL by logging into Bluemix and clicking on Create a Container button. It will be shown under Image Registry URL.
 
-Once the IP address is provided, use it to login to http://<ip> with bob / secret as credentials.
+Once the IP address is provided, use it to login to http://\<ip\> with bob / secret as credentials.
 
 Deploy with the IBM DevOps Delivery Pipeline
 --------------------------------------
-
 
 After logging into your github account, open the following repository and fork it into your own account
 
