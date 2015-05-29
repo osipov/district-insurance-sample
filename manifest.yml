@@ -2,7 +2,7 @@
 declared-services: 
   tradeoff_analytics_instance: 
     label: tradeoff_analytics 
-    plan: free
+    plan: standard
 applications:
 - name: district-insurance-sample
   command: node dist/server.js
