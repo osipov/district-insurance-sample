@@ -12,7 +12,7 @@ endif
 	mkdir -p tmp/tmp
 	-cf push NOOP -p tmp  -i 1 -d mybluemix.net -k 1M -m 64M --no-hostname --no-manifest --no-route --no-start
 	rm -r tmp
-	-cf create-service tradeoff_analytics free $(TRADEOFF_SERVICE_NAME_DEFAULT)
+	-cf create-service tradeoff_analytics standard $(TRADEOFF_SERVICE_NAME_DEFAULT)
 	-cf bind-service NOOP $(TRADEOFF_SERVICE_NAME_DEFAULT)
 #	-cf restage NOOP	
 	touch .deploy-cf
