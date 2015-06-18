@@ -18,7 +18,7 @@ If you don't have Docker Machine installed, you can find out how to install one 
 
 To get started, enter your Docker Machine environment with
 
-	docker-machine ssh
+	docker-machine ssh dev
 
 Check out the latest version of the code using
 
@@ -28,7 +28,7 @@ and install the required command line tools using the following
 
 	tce-load -wi make
 
-	curl -o cf.tgz -L -O https://cli.run.pivotal.io/stable?release=linux32-binary
+	curl -o cf.tgz -L -O https://cli.run.pivotal.io/stable?release=linux64-binary
 	sudo tar -zxvf cf.tgz -C /usr/bin/
 
 	tce-load -wi python
@@ -45,7 +45,7 @@ When prompted for the image name (defaults to district-insurance-sample), you ca
 
 The default deployment maps the container port 80 to host port 8080, so depending on the port forwarding configuration of your environment, the application should be accessible from your Docker Machine IP address which you can check using
 
-	docker-machine ip
+	docker-machine ip dev
 	
 so the demo application should be accessible from
 
