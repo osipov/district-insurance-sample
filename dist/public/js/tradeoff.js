@@ -8,7 +8,7 @@ var taClient = null;
 function loadTradeoffAnalytics(profile/*string or object*/, themeName/*string*/, callback/*function*/, errCallback/*function*/) {
 	var options = {
 			dilemmaServiceUrl : '/dilemma',
-			customCssUrl : "http://ta-cdn.mybluemix.net/modmt/styles/" + themeName + ".css",
+			customCssUrl : "http://ta-cdn.mybluemix.net/v1/modmt/styles/" + themeName + ".css",
 //			customCssUrl: "http://{this url}/advanced/themes/custom.css",
 			profile: profile,
 //			iframe: false,

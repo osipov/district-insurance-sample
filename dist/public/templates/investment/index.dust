@@ -33,6 +33,6 @@
     <script src="/js/utils.js"></script>
     <script src="/js/investment.js"></script>
     <script src="/js/table.js"></script>
-    <script src="http://ta-cdn.mybluemix.net/TradeoffAnalytics.js"></script>
+    <script src="http://ta-cdn.mybluemix.net/v1/TradeoffAnalytics.js"></script>
     <script src="/js/tradeoff.js"></script>
 {/javascript}
