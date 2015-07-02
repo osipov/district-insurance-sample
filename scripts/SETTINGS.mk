@@ -14,7 +14,7 @@ CF_API_URL_DEFAULT := https://api.ng.bluemix.net
 CONTAINER_SERVICE_NAME_DEFAULT := interconnect-container-service
 TRADEOFF_SERVICE_NAME_DEFAULT := interconnect-tradeoff-service
 
-TA_URL_DEFAULT := https://gateway.watsonplatform.net/tradeoff-analytics-beta/api
+TA_URL_DEFAULT := https://gateway.watsonplatform.net/tradeoff-analytics/api
 VCAP_SERVICES = '{ "tradeoff_analytics": [{ "name": "interconnect-tradeoff-service", "label": "tradeoff_analytics", "plan": "free", "credentials": { "url": "$(TA_URL)", "username": "$(TA_USER)", "password": "$(TA_PASS)" } }] }'
 #-------------------------------------------------------------------------------
 # Copyright IBM Corp. 2015
