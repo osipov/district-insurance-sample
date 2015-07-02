@@ -34,8 +34,8 @@ and install the required command line tools using the following
 	tce-load -wi python
 	curl https://bootstrap.pypa.io/get-pip.py -o - | sudo python
 	curl https://bootstrap.pypa.io/ez_setup.py -o - | sudo python
-	curl -O https://static-ice.ng.bluemix.net/icecli-2.0.zip
-	sudo pip install icecli-2.0.zip
+	curl -O https://static-ice.ng.bluemix.net/icecli-3.0.zip
+	sudo pip install icecli-3.0.zip
 
 Change directory to district-insurance-sample and run the build and deploy process
 
@@ -61,11 +61,11 @@ Deploy to the IBM Container Service from a command line
 
 Download and install IBM Bluemix (Cloud Foundry) and IBM Container Service clients. The Cloud Foundry CLI is available for your platform from: https://github.com/cloudfoundry/cli#downloads
 
-You can download the IBM Container Service client from https://static-ice.ng.bluemix.net/icecli-2.0.zip
+You can download the IBM Container Service client from https://static-ice.ng.bluemix.net/icecli-3.0.zip
 
 If you are using PIP, you can install using 
 
-	sudo pip install icecli-2.0.zip
+	sudo pip install icecli-3.0.zip
 
 otherwise you'll have to unzip and install the client manually.
 
