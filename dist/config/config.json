@@ -135,7 +135,7 @@
             }
         },
         "session": {
-            "enabled": false,
+            "enabled": true,
             "priority": 100,
             "module": {
                 "name": "express-session",
