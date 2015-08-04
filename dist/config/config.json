@@ -133,22 +133,22 @@
                     }
                 ]
             }
--        },		
--        "session": {		
--            "enabled": true,		
--            "priority": 100,		
--            "module": {		
--                "name": "express-session",		
--                "arguments": [		
--                    {		
--                        "key": "JSESSIONID",		
--                        "secret": "keyboard cat",
+        },		
+        "session": {		
+            "enabled": true,		
+            "priority": 100,		
+            "module": {		
+                "name": "express-session",		
+                "arguments": [		
+                    {		
+                        "key": "JSESSIONID",		
+                        "secret": "keyboard cat",
                          "cookie": {
                              "maxAge": 1
                          }
--                    }		
--                ]		
--            }            
+                    }		
+                ]		
+            }            
         }
     }
 }
