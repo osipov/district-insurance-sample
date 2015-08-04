@@ -133,19 +133,6 @@
                     }
                 ]
             }
-        },
-        "session": {
-            "enabled": true,
-            "priority": 100,
-            "module": {
-                "name": "express-session",
-                "arguments": [
-                    {
-                        "key": "JSESSIONID",
-                        "secret": "keyboard cat"
-                    }
-                ]
-            }
         }
     }
 }
