@@ -8,7 +8,7 @@ include scripts/SETTINGS.mk
 
 #Prompt for IMAGE value unless passed as command line argument
 ifeq ($(origin IMAGE), undefined)
-export IMAGE := $(shell read -p "Image [$(IMAGE_DEFAULT)]: " tmp; echo $${tmp:-'$(IMAGE_DEFAULT)'})	
+export IMAGE := $(shell read -p "Image [$(IMAGE_DEFAULT)]: " tmp; echo $${tmp:-'$(IMAGE_DEFAULT)'})
 endif
 
 build-release-local: .interactive-deploy-cf
@@ -37,7 +37,7 @@ build-test-release-local:
 	@make -j 1 -f scripts/ics.mk .login-ics
 	@echo Next, you will be shown an IP address for the demo. Note it as well. Press any key to continue.
 	@read tmp
-	@ice ip request	
+	@cf ic ip request
 	@read -p "Press any key to continue" blah
 	touch .setup-ics
 

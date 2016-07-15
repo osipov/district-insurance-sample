@@ -3,17 +3,18 @@ include scripts/SETTINGS.mk
 include scripts/build/interactive.bluemix.mk
 
 push:
-	-ice --local tag -f $(IMAGE) $(REGISTRY)/$(IMAGE)
-	-ice --local push $(REGISTRY)/$(IMAGE)
+	#-cf ic tag -f $(IMAGE) $(REGISTRY)/$(IMAGE)
+	#-cf ic push $(REGISTRY)/$(IMAGE)
 
 rerun:
-	-ice stop $(IMAGE)
-	-ice ip unbind $(IP) $(IMAGE)
-	-ice rm $(IMAGE)
+	-cf ic stop $(IMAGE)
+	-cf ic ip unbind $(IP) $(IMAGE)
+	-cf ic rm $(IMAGE)
 	sleep 10
-	ice run --name $(IMAGE) --bind NOOP $(REGISTRY)/$(IMAGE) --publish 80
+	#ice run --name $(IMAGE) --bind NOOP $(REGISTRY)/$(IMAGE) --publish 80
+	cf ic run --name $(REGISTRY)/$(IMAGE)
 	sleep 10
-	ice ip bind $(IP) $(IMAGE)
+	cf ic ip bind $(IP) $(IMAGE)
 #-------------------------------------------------------------------------------
 # Copyright IBM Corp. 2015
 #

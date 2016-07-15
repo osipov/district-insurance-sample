@@ -1,6 +1,6 @@
 # Licensed under the Apache License. See footer for details.
 .login-ics:
-	-ice login
+	-cf ic login
 	touch .login-ics
 #-------------------------------------------------------------------------------
 # Copyright IBM Corp. 2015

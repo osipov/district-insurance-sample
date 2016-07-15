@@ -3,7 +3,7 @@ include scripts/SETTINGS.mk
 build:
 	cp scripts/build/Dockerfile .
 	cp scripts/build/.dockerignore .
-	docker build -t $(IMAGE) .
+	cf ic build -t $(IMAGE) .
 
 build-local:
 	cp scripts/build/Dockerfile .
