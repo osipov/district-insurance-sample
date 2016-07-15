@@ -8,13 +8,15 @@ endif
 	cf login -a $(CF_API_URL)
 	touch .login-cf
 
-.deploy-cf:	
-	mkdir -p tmp/tmp
+.deploy-cf:
+	mkdir -p tmp
+	touch tmp/tmp
 	-cf push NOOP -p tmp  -i 1 -d mybluemix.net -k 1M -m 64M --no-hostname --no-manifest --no-route --no-start
+	rm -r tmp/tmp
 	rm -r tmp
 	-cf create-service tradeoff_analytics standard $(TRADEOFF_SERVICE_NAME_DEFAULT)
 	-cf bind-service NOOP $(TRADEOFF_SERVICE_NAME_DEFAULT)
-#	-cf restage NOOP	
+#	-cf restage NOOP
 	touch .deploy-cf
 
 .interactive-deploy-warn:
@@ -24,7 +26,7 @@ endif
 .interactive-deploy-cf: .login-cf .interactive-deploy-warn .deploy-cf
 	@cf env NOOP
 	@echo Note the Tradeoff Analytics password and username above and copy/paste them when prompted
-	@read -p "Press any key to continue."  blah	
+	@read -p "Press any key to continue."  blah
 #-------------------------------------------------------------------------------
 # Copyright IBM Corp. 2015
 #

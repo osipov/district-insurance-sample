@@ -8,7 +8,7 @@ Make sure you have an IBM Bluemix account. You can get one here: https://apps.ad
 The easiest way to get started with the application is to click the following button
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/osipov/district-insurance-sample.git)
 
-You can also run this demo in a [Docker Machine](https://github.com/osipov/district-insurance-sample#run-in-a-docker-machine). If you are willing to do some configuration you can also deploy to IBM Container Services using [IBM DevOps ](https://github.com/osipov/district-insurance-sample#deploy-with-the-ibm-devops-delivery-pipeline) or do an interactive deployment [directly to IBM Container Service from your command line](https://github.com/osipov/district-insurance-sample#deploy-to-the-ibm-container-service-from-a-command-line). 
+You can also run this demo in a [Docker Machine](https://github.com/osipov/district-insurance-sample#run-in-a-docker-machine). If you are willing to do some configuration you can also deploy to IBM Container Services using [IBM DevOps ](https://github.com/osipov/district-insurance-sample#deploy-with-the-ibm-devops-delivery-pipeline) or do an interactive deployment [directly to IBM Container Service from your command line](https://github.com/osipov/district-insurance-sample#deploy-to-the-ibm-container-service-from-a-command-line).
 
 
 Run in a Docker Machine
@@ -31,11 +31,8 @@ and install the required command line tools using the following
 	curl -o cf.tgz -L -O https://cli.run.pivotal.io/stable?release=linux64-binary
 	sudo tar -zxvf cf.tgz -C /usr/bin/
 
-	tce-load -wi python
-	curl https://bootstrap.pypa.io/get-pip.py -o - | sudo python
-	curl https://bootstrap.pypa.io/ez_setup.py -o - | sudo python
-	curl -O https://static-ice.ng.bluemix.net/icecli-3.0.zip
-	sudo pip install icecli-3.0.zip
+	cf install-plugin https://static-ice.ng.bluemix.net/ibm-containers-linux_x64
+	cf ic init
 
 Change directory to district-insurance-sample and run the build and deploy process
 
@@ -46,7 +43,7 @@ When prompted for the image name (defaults to district-insurance-sample), you ca
 The default deployment maps the container port 80 to host port 8080, so depending on the port forwarding configuration of your environment, the application should be accessible from your Docker Machine IP address which you can check using
 
 	docker-machine ip dev
-	
+
 so the demo application should be accessible from
 
 	http://<ip>:8080/
@@ -63,7 +60,7 @@ Download and install IBM Bluemix (Cloud Foundry) and IBM Container Service clien
 
 You can download the IBM Container Service client from https://static-ice.ng.bluemix.net/icecli-3.0.zip
 
-If you are using PIP, you can install using 
+If you are using PIP, you can install using
 
 	sudo pip install icecli-3.0.zip
 
@@ -96,7 +93,7 @@ After logging into your github account, open the following repository and fork i
 
 Note the forked URL of your github repository.
 
-Open the Settings menu (gear icon on the upper right) on github.com and navigate to the Personal access token section from the left hand menu. 
+Open the Settings menu (gear icon on the upper right) on github.com and navigate to the Personal access token section from the left hand menu.
 
 Generate a new personal access token, keeping the scopes set and default, and name the token ```IBM DevOps```. Make sure you copy the token after generating it because you'll need it for integration with IBM DevOps.
 
@@ -108,9 +105,9 @@ Make sure that the option to make this a Bluemix project is checked off and you 
 
 Create the project using the Create button at the bottom of the page.
 
-Once the page changes and confirms that you have successfully created the project, click on Build & Deploy on the upper right of the page. 
+Once the page changes and confirms that you have successfully created the project, click on Build & Deploy on the upper right of the page.
 
-In the Build & Deploy pipeline section of the page, click on Add Stage (you can name the stage Build), make sure that your forked github repository is selected and paste your github personal access token. By default, the branch should be master. 
+In the Build & Deploy pipeline section of the page, click on Add Stage (you can name the stage Build), make sure that your forked github repository is selected and paste your github personal access token. By default, the branch should be master.
 
 Choose Jobs in the stage configuration, click Add Job, and select Build job type. The Builder type must be IBM Container Service. Ensure that the organization and space are selected correctly, specify district-insurance-sample as the Image Name, and click Save.
 
@@ -131,9 +128,9 @@ Act I
 
 The scenario begins with the sales person starting a discussion with an insurance/financial customer about retirement plans and insurance risks. The sales person logs in to the application (use bob/secret) and opens the planning calculator (http://\<host\>/calculator). Calculations about the financial situation of the customer leads the sales person to offer a range of company's products to the customer. The sales person opens the product list using the left hand side menu (http://\<host\>/table). However the product list is very long and detailed. The customer doesn't know what to choose. Summary of pain points.
 
-Scene change. 
+Scene change.
 
-A developer comes to the rescue. Using Bluemix to discover and add the tradeoff analytics service to the application, the developer then opens the [source code](https://github.com/osipov/district-insurance-sample/blob/master/dist/public/templates/layouts/navigation.dust) and changes the UI (the link with the investmentsIcon (not list-investmentsIcon) should change from pointing to /table to point to /investment) to take advantage of the new service. The developer relies on Docker to rapidly package and deploy the application. 
+A developer comes to the rescue. Using Bluemix to discover and add the tradeoff analytics service to the application, the developer then opens the [source code](https://github.com/osipov/district-insurance-sample/blob/master/dist/public/templates/layouts/navigation.dust) and changes the UI (the link with the investmentsIcon (not list-investmentsIcon) should change from pointing to /table to point to /investment) to take advantage of the new service. The developer relies on Docker to rapidly package and deploy the application.
 
 Act II
 

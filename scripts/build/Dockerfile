@@ -1,6 +1,6 @@
 # Licensed under the Apache License. See footer for details.
-#FROM node 
-FROM registry-ice.ng.bluemix.net/ibmnode:latest
+#FROM node
+FROM registry.ng.bluemix.net/ibmnode:v1.1
 
 RUN mkdir /hellonode
 
