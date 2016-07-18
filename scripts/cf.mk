@@ -6,6 +6,7 @@ endif
 
 .login-cf:
 	cf login -a $(CF_API_URL)
+	cf ic init
 	touch .login-cf
 
 .deploy-cf:
