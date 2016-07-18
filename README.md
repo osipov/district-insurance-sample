@@ -32,7 +32,8 @@ and install the required command line tools using the following
 	sudo tar -zxvf cf.tgz -C /usr/bin/
 
 	cf install-plugin https://static-ice.ng.bluemix.net/ibm-containers-linux_x64
-	cf ic init
+	
+Ensure that commands above complete successfully.
 
 Change directory to district-insurance-sample and run the build and deploy process
 
